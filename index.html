@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuriososMental - Content</title>
+  <link rel="Website Icon" type="png" href="img/icon.png"> <!--ICONO DE LA PAGINA-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="main-container">
+    <section class="formulario">
+      <h1>🧠 Generador de Posts de Curiosidades</h1>
+
+      <label>Texto del post:</label>
+      <textarea id="descripcion" rows="4" placeholder='Los pingüinos le proponen "matrimonio" a su pareja con una piedra.'></textarea>
+
+      <label>Palabras a resaltar (separadas por coma):</label>
+      <input type="text" id="resaltadas" placeholder='pingüinos, "matrimonio", piedra'>
+
+      <label>Imagen de fondo personalizada:</label>
+      <input type="file" id="imagen" accept="image/*">
+
+      <label>Plantilla:</label>
+      <select id="plantilla" onchange="cambiarPlantilla()">
+        <option value="plantillas/DatosCuriosos2025.png">Plantilla 1 - Curiosidades</option>
+        <option value="plantillas/CasosNoticias2025.png">Plantilla 2 - Casos y Noticias</option>
+      </select>
+
+      <label>Selecciona fuente:</label>
+      <select id="fuente">
+        <option value="'Fredoka One', sans-serif" selected>Fredoka One</option>
+        <option value="'Arial', sans-serif">Arial</option>
+        <option value="'Courier New', monospace">Courier New</option>
+        <option value="'Georgia', serif">Georgia</option>
+        <option value="'Comic Sans MS', cursive">Comic Sans</option>
+      </select>      
+
+      <button onclick="generarPost()">Generar Post</button>
+
+      
+
+      <div class="descarga">
+        <label>Formato de descarga:</label>
+        <select id="formato-descarga">
+            <option value="png">PNG</option>
+            <option value="jpeg">JPG</option>
+        </select>
+        <button onclick="descargarImagen()">Descargar Post</button>
+      </div>
+    </section>
+
+    <section class="preview">
+      <h2>Vista Previa</h2>
+      <div id="post-preview" class="post-container">
+        <div class="plantilla-bg" id="plantilla-bg"></div>
+        <div class="imagen-fondo-wrapper">
+            <div id="imagen-fondo" class="draggable zoomable"></div>
+            <div class="degradado-imagen"></div> <!-- NUEVO -->
+          </div>
+        <div class="texto-post">
+            <div id="preview-description" class="description"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
