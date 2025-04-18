@@ -21,7 +21,6 @@
   
   .main-container {
     display: flex;
-    flex-direction: column;
     gap: 30px;
   }
   
@@ -177,9 +176,7 @@
     padding: 10px;
   }
   .main-container {
-    /*flex-direction: row;*/
-    /*justify-content: space-between;
-    align-items: flex-start;*/
+    flex-direction: column;
     max-width: 768px;
   }
   .formulario {
