@@ -76,57 +76,61 @@ function generarPost() {
 }
 
 function descargarImagen() {
-    const formato = document.getElementById("formato-descarga").value;
-    const original = document.getElementById("post-preview");
-  
-    // Crear contenedor fijo con tamaño deseado
-    const wrapper = document.createElement("div");
-    wrapper.style.width = "1500px";
-    wrapper.style.height = "1500px";
-    wrapper.style.position = "fixed";
-    wrapper.style.top = "-9999px";
-    wrapper.style.left = "-9999px";
-    wrapper.style.zIndex = "-1";
-  
-    // Clonar contenido
-    const clone = original.cloneNode(true);
-    clone.style.width = "100%";
-    clone.style.height = "100%";
+  const formato = document.getElementById("formato-descarga").value;
+  const original = document.getElementById("post-preview");
 
-    const imagenFondoClonada = clone.querySelector("#imagen-fondo");
-    if (imagenFondoClonada) {
-    imagenFondoClonada.style.transform = `translate(${posX * 1.1}px, ${posY * 1.5}px) scale(${scale * 1})`;
-    }
-  
-    const descripcionClonada = clone.querySelector(".description");
-    if (descripcionClonada) {
-    descripcionClonada.style.fontSize = "44px"; // ajusta según te guste
-    descripcionClonada.style.lineHeight = "1.4";
-    }
+  // Crear contenedor temporal
+  const wrapper = document.createElement("div");
+  wrapper.style.width = `${original.offsetWidth}px`;
+  wrapper.style.height = `${original.offsetHeight}px`;
+  wrapper.style.position = "fixed";
+  wrapper.style.top = "-9999px";
+  wrapper.style.left = "-9999px";
+  wrapper.style.zIndex = "-1";
 
-    wrapper.appendChild(clone);
-    document.body.appendChild(wrapper);
-  
-    html2canvas(wrapper, {
-      useCORS: true,
-      allowTaint: true,
-      backgroundColor: null,
-      scale: 1,
-      width: 1500,
-      height: 1500,
-      scrollX: 0,
-      scrollY: 0,
-      windowWidth: 1500,
-      windowHeight: 1500
-    }).then(canvas => {
-      document.body.removeChild(wrapper);
-      const link = document.createElement("a");
-      link.download = `DATO.${formato}`;
-      link.href = canvas.toDataURL(`image/${formato}`);
-      link.click();
-    });
+  // Clonar contenido
+  const clone = original.cloneNode(true);
+  clone.style.width = "100%";
+  clone.style.height = "100%";
+
+  // Copiar directamente el transform actual del DOM original
+  const imagenFondoClonada = clone.querySelector("#imagen-fondo");
+  const imagenFondoOriginal = document.getElementById("imagen-fondo");
+
+  if (imagenFondoClonada && imagenFondoOriginal) {
+    const transform = window.getComputedStyle(imagenFondoOriginal).transform;
+    imagenFondoClonada.style.transform = transform;
   }
-  
+
+  // Ajustar texto (opcional: tamaño más grande para exportación)
+  const descripcionClonada = clone.querySelector(".description");
+  if (descripcionClonada) {
+    descripcionClonada.style.fontSize = "44px";
+    descripcionClonada.style.lineHeight = "1.4";
+  }
+
+  wrapper.appendChild(clone);
+  document.body.appendChild(wrapper);
+
+  html2canvas(wrapper, {
+    useCORS: true,
+    allowTaint: true,
+    backgroundColor: null,
+    scale: 1, // No hacer zoom adicional
+    width: original.offsetWidth,
+    height: original.offsetHeight,
+    scrollX: 0,
+    scrollY: 0,
+    windowWidth: original.offsetWidth,
+    windowHeight: original.offsetHeight
+  }).then(canvas => {
+    document.body.removeChild(wrapper);
+    const link = document.createElement("a");
+    link.download = `DATO.${formato}`;
+    link.href = canvas.toDataURL(`image/${formato}`);
+    link.click();
+  });
+}
 
 // Cargar plantilla por defecto y fuente inicial
 window.addEventListener("DOMContentLoaded", () => {

@@ -13,7 +13,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background: #272727;
+    background: #504f4f;
     color: #fff;
     padding: 20px;
     width: 1070px;
@@ -23,14 +23,6 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-  }
-  
-  @media (min-width: 768px) {
-    .main-container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
   }
   
   .formulario {
@@ -86,12 +78,19 @@
   }
 
   .preview {
-    flex: 1;
-    max-width: 600px;
+    width: 600px;
+    height: 650px;
+  }
+
+  
+  .preview__container {
+    scale: 0.4;
+    transform-origin: top left;
   }
 
   #post-preview {
-    width: 100%;
+    width: 1500px;
+    height: 1500px;
     aspect-ratio: 1 / 1;
     position: relative;
   }
@@ -143,12 +142,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 4; /* encima de todo */
-    /*padding: 20px;*/
+    z-index: 4; 
   }
   
   .description {
-    font-size: 1.1rem;
+    font-size: 44px;
     line-height: 1.5em;
     font-weight: 500;
     width: 72%;
@@ -170,4 +168,32 @@
 
 .descarga {
     margin-top: 60px;
+}
+
+/* ✅ Teléfonos (menos de 768px) */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
+  .main-container {
+    /*flex-direction: row;*/
+    /*justify-content: space-between;
+    align-items: flex-start;*/
+    max-width: 768px;
+  }
+  .formulario {
+    width: 100%;
+  }
+  .preview {
+    width: 100%;
+    height: 370px;
+  }
+  .preview__container {
+    width: 100%;
+  }
+  .preview__container {
+    scale: 0.22;
+    transform-origin: top left;
+  }
 }
