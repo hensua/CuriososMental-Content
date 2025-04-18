@@ -132,6 +132,35 @@ function descargarImagen() {
   });
 }
 
+function zoomIn() {
+  scale = Math.min(scale + 0.1, 3);
+  updateTransform();
+}
+function zoomOut() {
+  scale = Math.max(scale - 0.1, 0.5);
+  updateTransform();
+}
+
+function mover(direccion) {
+  const paso = 10; // cantidad de píxeles a mover
+  switch (direccion) {
+    case 'arriba':
+      posY -= paso;
+      break;
+    case 'abajo':
+      posY += paso;
+      break;
+    case 'izquierda':
+      posX -= paso;
+      break;
+    case 'derecha':
+      posX += paso;
+      break;
+  }
+  updateTransform();
+}
+
+
 // Cargar plantilla por defecto y fuente inicial
 window.addEventListener("DOMContentLoaded", () => {
   cambiarPlantilla();

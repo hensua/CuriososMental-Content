@@ -67,6 +67,27 @@
         </div>
       </div>
     </section>
+    
+    <section class="controles__container">
+      <h2>Controles Zoom</h2>
+      <div class="controles-zoom">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+      </div>
+      <h2 class="tittle__movimiento">Controles Movimiento</h2>
+      <div class="controles-movimiento">
+        <div class="fila-mov">
+          <h3>Y:</h3>
+          <button onclick="mover('arriba')">↑</button>
+          <button onclick="mover('abajo')">↓</button>
+        </div>
+        <div class="fila-mov">
+          <h3>X:</h3>
+          <button onclick="mover('izquierda')">←</button>
+          <button onclick="mover('derecha')">→</button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>

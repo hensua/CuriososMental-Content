@@ -169,6 +169,10 @@
     margin-top: 60px;
 }
 
+.controles__container {
+  display: none;
+}
+
 /* ✅ Teléfonos (menos de 768px) */
 @media (max-width: 768px) {
   body {
@@ -192,5 +196,55 @@
   .preview__container {
     scale: 0.22;
     transform-origin: top left;
+  }
+
+  .controles__container {
+    display: block;
+  }
+  .controles-zoom {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: left;
+  }
+  .controles-zoom button {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffe100;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .tittle__movimiento {
+    margin-top: 15px;
+  }
+
+  .controles-movimiento {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .fila-mov {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .controles-movimiento button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffe100;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
   }
 }
