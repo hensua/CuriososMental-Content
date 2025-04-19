@@ -1,3 +1,4 @@
+/*script.js*/
 let scale = 1;
 let posX = 0;
 let posY = 0;
@@ -36,9 +37,26 @@ function updateTransform() {
 
 // Cambiar plantilla
 function cambiarPlantilla() {
-  const url = document.getElementById("plantilla").value;
-  document.getElementById("plantilla-bg").style.backgroundImage = `url(${url})`;
+  const select = document.getElementById("plantilla");
+  const url = select.value;
+  const clasePlantilla = select.options[select.selectedIndex].dataset.clase;
+  
+  const preview = document.getElementById("post-preview");
+  const plantillaBG = document.getElementById("plantilla-bg");
+  const imagenFondo = document.getElementById("imagen-fondo");
+
+  preview.classList.remove("plantilla-1", "plantilla-2");
+  preview.classList.add(clasePlantilla);
+
+  imagenFondo.style.backgroundSize = "";
+  imagenFondo.style.backgroundPosition = "";
+  imagenFondo.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+
+  // Cambiar imagen de fondo base
+  plantillaBG.style.backgroundImage = `url(${url})`;
 }
+
+
 
 // Cargar imagen personalizada
 document.getElementById("imagen").addEventListener("change", function (e) {
@@ -102,11 +120,18 @@ function descargarImagen() {
     imagenFondoClonada.style.transform = transform;
   }
 
-  // Ajustar texto (opcional: tamaño más grande para exportación)
+  // Ajustar texto según plantilla
   const descripcionClonada = clone.querySelector(".description");
+  const body = document.body;
+
   if (descripcionClonada) {
-    descripcionClonada.style.fontSize = "44px";
-    descripcionClonada.style.lineHeight = "1.4";
+    if (body.classList.contains("plantilla-1")) {
+      descripcionClonada.style.fontSize = "44px";
+      descripcionClonada.style.lineHeight = "1.4";
+    } else if (body.classList.contains("plantilla-2")) {
+      descripcionClonada.style.fontSize = "58.2px";
+      descripcionClonada.style.lineHeight = "1.2";
+    }
   }
 
   wrapper.appendChild(clone);
@@ -116,7 +141,7 @@ function descargarImagen() {
     useCORS: true,
     allowTaint: true,
     backgroundColor: null,
-    scale: 1, // No hacer zoom adicional
+    scale: 1,
     width: original.offsetWidth,
     height: original.offsetHeight,
     scrollX: 0,
@@ -131,6 +156,7 @@ function descargarImagen() {
     link.click();
   });
 }
+
 
 function zoomIn() {
   scale = Math.min(scale + 0.1, 3);

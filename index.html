@@ -1,3 +1,4 @@
+<!--index.html-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,9 +26,10 @@
 
       <label>Plantilla:</label>
       <select id="plantilla" onchange="cambiarPlantilla()">
-        <option value="plantillas/DatosCuriosos2025.png">Plantilla 1 - Curiosidades</option>
-        <option value="plantillas/CasosNoticias2025.png">Plantilla 2 - Casos y Noticias</option>
+        <option value="plantillas/DatosCuriosos2025.png" data-clase="plantilla-1">Plantilla 1 - Curiosidades</option>
+        <option value="plantillas/CasosNoticias2025.png" data-clase="plantilla-2">Plantilla 2 - Casos y Noticias</option>
       </select>
+
 
       <label>Selecciona fuente:</label>
       <select id="fuente">
@@ -63,6 +65,7 @@
             </div>
           <div class="texto-post">
               <div id="preview-description" class="description"></div>
+              <div class="etiquetas"><img src="plantillas/etiquetas.png" alt=""></div>
           </div>
         </div>
       </div>
