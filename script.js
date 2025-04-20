@@ -45,7 +45,7 @@ function cambiarPlantilla() {
   const plantillaBG = document.getElementById("plantilla-bg");
   const imagenFondo = document.getElementById("imagen-fondo");
 
-  preview.classList.remove("plantilla-1", "plantilla-2");
+  preview.classList.remove("plantilla-1", "plantilla-2", "plantilla-3");
   preview.classList.add(clasePlantilla);
 
   imagenFondo.style.backgroundSize = "";
@@ -130,6 +130,9 @@ function descargarImagen() {
       descripcionClonada.style.lineHeight = "1.4";
     } else if (body.classList.contains("plantilla-2")) {
       descripcionClonada.style.fontSize = "58.2px";
+      descripcionClonada.style.lineHeight = "1.2";
+    } else if (body.classList.contains("plantilla-3")) {
+      descripcionClonada.style.fontSize = "53px";
       descripcionClonada.style.lineHeight = "1.2";
     }
   }
