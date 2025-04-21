@@ -40,21 +40,32 @@ function cambiarPlantilla() {
   const select = document.getElementById("plantilla");
   const url = select.value;
   const clasePlantilla = select.options[select.selectedIndex].dataset.clase;
-  
+
   const preview = document.getElementById("post-preview");
   const plantillaBG = document.getElementById("plantilla-bg");
   const imagenFondo = document.getElementById("imagen-fondo");
+  const imagenPerzonalizada = document.querySelector(".imagen__Perzonalizada");
 
+  // Cambiar clase de plantilla
   preview.classList.remove("plantilla-1", "plantilla-2", "plantilla-3");
   preview.classList.add(clasePlantilla);
 
+  // Reiniciar estilos de imagen
   imagenFondo.style.backgroundSize = "";
   imagenFondo.style.backgroundPosition = "";
   imagenFondo.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
 
   // Cambiar imagen de fondo base
   plantillaBG.style.backgroundImage = `url(${url})`;
+
+  // Mostrar u ocultar .imagen__Perzonalizada si es plantilla 3
+  if (clasePlantilla === "plantilla-3") {
+    imagenPerzonalizada.style.display = "none";
+  } else {
+    imagenPerzonalizada.style.display = "";
+  }
 }
+
 
 
 
