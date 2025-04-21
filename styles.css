@@ -312,6 +312,9 @@ body {
   line-height: 1.2em;
   text-align: left;
 }
+.plantilla-2 .description .resaltado {
+  color: #ffffff;
+}
 
 /* ---------------------------------- */
 /* 🎨 Estilos para Plantilla 3 */
@@ -344,5 +347,200 @@ body {
   /*background-color: rgba(0, 136, 18, 0.322);*/
 }
 .plantilla-3 .etiquetas {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* 🆕 Estilos para Plantilla 4 */
+/* ---------------------------------- */
+.plantilla-4 .imagen-fondo-wrapper {
+  height: 100%;
+  background-color: #ffed00;
+}
+.plantilla-4 #imagen-fondo {
+  background-size: cover;
+  background-position: center;
+}
+
+.plantilla-4 .etiquetas img {
+  width: 272px;
+  margin-left: 2px;
+  margin-top: 12px;
+  object-fit: contain;
+}
+
+.plantilla-4 .degradado-imagen {
+  display: none;
+}
+.plantilla-4 .texto-post {
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.plantilla-4 .description {
+  font-size: 44px;
+  line-height: 1.4em;
+  font-weight: 500;
+  width: 60.2%;
+}
+.plantilla-4 .etiquetas {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* 🆕 Estilos para Plantilla 5 */
+/* ---------------------------------- */
+.plantilla-5 .imagen-fondo-wrapper {
+  height: 100%;
+  background-color: #ffed00;
+}
+.plantilla-5 #imagen-fondo {
+  background-size: cover;
+  background-position: center;
+}
+
+.plantilla-5 .etiquetas img {
+  width: 272px;
+  margin-left: 2px;
+  margin-top: 12px;
+  object-fit: contain;
+}
+
+.plantilla-5 .degradado-imagen {
+  display: none;
+}
+.plantilla-5 .texto-post {
+  top: 81.2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.plantilla-5 .description {
+  font-size: 44px;
+  line-height: 1.4em;
+  font-weight: 500;
+  width: 60.2%;
+}
+.plantilla-5 .etiquetas {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* 🎨 Estilos para Plantilla 6 */
+/* ---------------------------------- */
+.plantilla-6 .imagen-fondo-wrapper {
+  height: 65%;
+  background-color: #00b000;
+}
+.plantilla-6 #imagen-fondo {
+  background-size: contain;
+}
+.plantilla-6 .degradado-imagen {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(to bottom, transparent, #000);
+}
+.plantilla-6 .texto-post {
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.plantilla-6 .description {
+  font-size: 44px;
+  line-height: 1.4em;
+  font-weight: 500;
+  width: 72%;
+}
+.plantilla-6 .description .resaltado {
+  color: #00b000;
+}
+.plantilla-6 .etiquetas {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* 🎨 Estilos para Plantilla 7 */
+/* ---------------------------------- */
+.plantilla-7 .imagen-fondo-wrapper {
+  height: 65%;
+  background-color: #ff0000;
+}
+.plantilla-7 #imagen-fondo {
+  background-size: contain;
+}
+.plantilla-7 .degradado-imagen {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(to bottom, transparent, #000);
+}
+.plantilla-7 .texto-post {
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.plantilla-7 .description {
+  font-size: 44px;
+  line-height: 1.4em;
+  font-weight: 500;
+  width: 72%;
+}
+.plantilla-7 .description .resaltado {
+  color: #ff0000;
+}
+.plantilla-7 .etiquetas {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* 🆕 Estilos para Plantilla 8 */
+/* ---------------------------------- */
+.plantilla-8 .imagen-fondo-wrapper {
+  height: 100%;
+  background-color: #ffed00;
+}
+.plantilla-8 #imagen-fondo {
+  background-size: cover;
+  background-position: center;
+}
+
+.plantilla-8 .etiquetas img {
+  display: none;
+}
+
+.plantilla-8 .degradado-imagen {
+  display: none;
+}
+.plantilla-8 .texto-post {
+  display: none;
+}
+.plantilla-8 .description {
+  display: none;
+}
+.plantilla-8 .description .resaltado {
   display: none;
 }

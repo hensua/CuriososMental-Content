@@ -47,7 +47,7 @@ function cambiarPlantilla() {
   const imagenPerzonalizada = document.querySelector(".imagen__Perzonalizada");
 
   // Cambiar clase de plantilla
-  preview.classList.remove("plantilla-1", "plantilla-2", "plantilla-3");
+  preview.classList.remove("plantilla-1", "plantilla-2", "plantilla-3", "plantilla-4", "plantilla-5", "plantilla-6", "plantilla-7", "plantilla-8");
   preview.classList.add(clasePlantilla);
 
   // Reiniciar estilos de imagen
@@ -145,6 +145,26 @@ function descargarImagen() {
     } else if (body.classList.contains("plantilla-3")) {
       descripcionClonada.style.fontSize = "53px";
       descripcionClonada.style.lineHeight = "1.2";
+    }
+    else if (body.classList.contains("plantilla-4")) {
+      descripcionClonada.style.fontSize = "44px";
+      descripcionClonada.style.lineHeight = "1.4";
+    }
+    else if (body.classList.contains("plantilla-5")) {
+      descripcionClonada.style.fontSize = "44px";
+      descripcionClonada.style.lineHeight = "1.4";
+    }
+    else if (body.classList.contains("plantilla-6")) {
+      descripcionClonada.style.fontSize = "44px";
+      descripcionClonada.style.lineHeight = "1.4";
+    }
+    else if (body.classList.contains("plantilla-7")) {
+      descripcionClonada.style.fontSize = "44px";
+      descripcionClonada.style.lineHeight = "1.4";
+    }
+    else if (body.classList.contains("plantilla-8")) {
+      descripcionClonada.style.fontSize = "";
+      descripcionClonada.style.lineHeight = "";
     }
   }
 
