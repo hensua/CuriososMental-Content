@@ -283,7 +283,7 @@ body {
 }
 
 .plantilla-2 .etiquetas img {
-  width: 272px;
+  width: 200px;
   margin-left: 2px;
   margin-top: 12px;
   object-fit: contain;
@@ -299,7 +299,7 @@ body {
   background-color: #00000054;
 }
 .plantilla-2 .texto-post {
-  top: 76.4%;
+  top: 77%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-left: 98px;
@@ -309,13 +309,13 @@ body {
   justify-content: left;
 }
 .plantilla-2 .description {
-  width: 68%;
-  font-size: 58.2px;
+  width: 63%;
+  font-size: 40px;
   line-height: 1.2em;
   text-align: left;
 }
 .plantilla-2 .description .resaltado {
-  color: #ffffff;
+  color: #ffed00;
 }
 
 /* ---------------------------------- */
