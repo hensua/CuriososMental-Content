@@ -375,7 +375,7 @@ body {
   display: none;
 }
 .plantilla-4 .texto-post {
-  top: 79%;
+  top: 77.6%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 160px;
@@ -385,10 +385,10 @@ body {
   text-align: center;
 }
 .plantilla-4 .description {
-  font-size: 44px;
-  line-height: 1.4em;
+  font-size: 36px;
+  line-height: 1.2em;
   font-weight: 500;
-  width: 60.2%;
+  width: 65%;
 }
 .plantilla-4 .etiquetas {
   display: none;
@@ -417,7 +417,7 @@ body {
   display: none;
 }
 .plantilla-5 .texto-post {
-  top: 81.2%;
+  top: 79.4%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 113px;
@@ -427,10 +427,10 @@ body {
   text-align: center;
 }
 .plantilla-5 .description {
-  font-size: 44px;
-  line-height: 1.4em;
+  font-size: 36px;
+  line-height: 1.2em;
   font-weight: 500;
-  width: 60.2%;
+  width: 65%;
 }
 .plantilla-5 .etiquetas {
   display: none;
